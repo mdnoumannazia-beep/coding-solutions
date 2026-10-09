@@ -52,53 +52,40 @@ Print the appropriate English representation,`even`, or `odd`, based on the cond
 **Language:** C  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T18:57:21.246Z  
+**Submitted:** 2026-10-09T16:14:17.531Z  
 
 ```c
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int a, b;
+    scanf("%d\n%d", &a, &b);
 
-    scanf("%d", &a);
-    scanf("%d", &b);
+    // Array of string representations for 1 to 9
+    char *words[] = {
+        "one", "two", "three", "four", "five",
+        "six", "seven", "eight", "nine"
+    };
 
-    for (int n = a; n <= b; n++)
-    {
-        if (n >= 1 && n <= 9)
-        {
-            if (n == 1)
-                printf("one\n");
-            else if (n == 2)
-                printf("two\n");
-            else if (n == 3)
-                printf("three\n");
-            else if (n == 4)
-                printf("four\n");
-            else if (n == 5)
-                printf("five\n");
-            else if (n == 6)
-                printf("six\n");
-            else if (n == 7)
-                printf("seven\n");
-            else if (n == 8)
-                printf("eight\n");
-            else if (n == 9)
-                printf("nine\n");
-        }
-        else if (n % 2 == 0)
-        {
+    for (int n = a; n <= b; n++) {
+        if (n >= 1 && n <= 9) {
+            printf("%s\n", words[n - 1]);
+        } else if (n % 2 == 0) {
             printf("even\n");
-        }
-        else
-        {
+        } else {
             printf("odd\n");
         }
     }
 
     return 0;
 }
+
+
+
+
+
+
+
 
 ```
 
