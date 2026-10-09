@@ -14,3 +14,11 @@ printf("%d %d\n",a+b,a-b);
 printf("%.1f %.1f\n",x+y,x-y);
     return 0;
 }
+
+
+
+
+
+
+
+
